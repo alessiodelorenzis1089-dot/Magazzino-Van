@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VanMag</title>
+<meta name="theme-color" content="#111827">
+
+<!-- ICONE -->
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+
+<!-- MANIFEST PWA -->
+<link rel="manifest" href="manifest.json">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>VanMag</h1>
+
+<div class="top-buttons">
+  <button id="addBtn">+ Prodotto</button>
+</div>
+
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Cerca per nome o categoria...">
+</div>
+
+<h2>Sotto Scorta</h2>
+<ul id="lowStockList"></ul>
+
+<h2>Tutti i Prodotti</h2>
+<ul id="productList"></ul>
+
+<!-- MODALE -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <h3 id="modalTitle">Nuovo Prodotto</h3>
+    <input type="text" id="name" placeholder="Nome prodotto">
+
+    <select id="category">
+      <option value="">Seleziona categoria</option>
+      <option value="Leviti">Leviti</option>
+      <option value="Schiume">Schiume</option>
+      <option value="Siliconi">Siliconi</option>
+      <option value="Spinole">Spinole</option>
+      <option value="Spessori">Spessori</option>
+    </select>
+
+    <input type="number" id="quantity" placeholder="Quantità iniziale">
+    <input type="number" id="minQuantity" placeholder="Quantità minima">
+    <input type="text" id="unit" placeholder="Unità (pezzi, tubi...)">
+
+    <div class="modal-buttons">
+      <button id="saveBtn">Salva</button>
+      <button id="cancelBtn">Annulla</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
